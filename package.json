@@ -2,6 +2,7 @@
   "name": "youtwobe",
   "version": "1.0.0",
   "description": "Sychronized Video Viewing",
+  "homepage": "https://kiro47.github.io/mithril-playground/",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   "homepage": "https://github.com/MTU-2019-Fall-CS3141-4711/Project#readme",
   "dependencies": {},
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "jsdom": "^15.1.1",
     "less": "^3.10.3",
     "less-watch-compiler": "^1.14.1",
@@ -31,6 +33,8 @@
     "build": "npm run-script build-web; npm run-script build-less",
     "build-web": "webpack js/router.js --output bin/app.js -p --devtool source-map",
     "build-less": "lessc style/style.less style.css",
+    "predeploy":  "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Nothing Here Yet\"; exit 1;",
     "test-coverage": "echo \"Nothing Here Yet\"; exit 1;"
   }
